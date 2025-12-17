@@ -86,6 +86,6 @@ if __name__ == '__main__':
     summary_df = test_data.copy()
     summary_df['label'] = np.round(predictions,4)
 
-    summary_df.to_csv('summary.csv', index=False)
+    summary_df.to_csv('submission.csv', index=False)
     print('DONEEE')
 
