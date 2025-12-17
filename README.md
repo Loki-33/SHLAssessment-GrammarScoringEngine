@@ -11,7 +11,7 @@ Heres the full walk-thorough of the process:
 ## TRAINING:
 The following results were obtained from training the XGBoost model:
 
-`
+
 ==================================================
 TOP 15 MOST IMPORTANT FEATURES
 ==================================================
@@ -31,8 +31,8 @@ long_pause_count    5.208794116973877
 avg_pause_duration  5.125491619110107
 word_count          5.092123508453369
 ==================================================
-`
-`
+
+
 ==================================================
 EVALUATION METRICS
 ==================================================
@@ -41,7 +41,7 @@ MAE:                     0.4814
 Accuracy (±0.5):         64.63%
 Correlation:             0.5032
 ==================================================
-`
+
 
 ## USAGE 
 1. Install the requirements using `pip install -r requirements.txt`
