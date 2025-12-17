@@ -8,39 +8,37 @@ Heres the full walk-thorough of the process:
 5. Machine Learning: Using Xgboost model and the various aforementioned features we train the model to predict the grammar scores from the audio files.
 6. Metrics: The metrics used are RMSE, MAE, Accuracy and Pearson correlation
 
-## TRAINING:
-The following results were obtained from training the XGBoost model:
+## Model Performance
 
+### Top 15 Most Important Features
+| Rank | Feature | Importance (Gain) |
+|-----:|---------|------------------:|
+| 1 | energy_mean | 9.746 |
+| 2 | error_density | 8.339 |
+| 3 | unique_word_count | 7.801 |
+| 4 | pitch_std | 6.519 |
+| 5 | filler_density | 5.836 |
+| 6 | total_errors | 5.724 |
+| 7 | energy_std | 5.535 |
+| 8 | speaking_time_ratio | 5.401 |
+| 9 | type_token_ratio | 5.364 |
+| 10 | max_tree_depth | 5.304 |
+| 11 | flesch_reading_ease | 5.303 |
+| 12 | pause_frequency | 5.262 |
+| 13 | long_pause_count | 5.209 |
+| 14 | avg_pause_duration | 5.125 |
+| 15 | word_count | 5.092 |
 
-==================================================
-TOP 15 MOST IMPORTANT FEATURES
-==================================================
-energy_mean         9.745972633361816
-error_density       8.338691711425781
-unique_word_count   7.800835609436035
-pitch_std           6.518698692321777
-filler_density      5.836128234863281
-total_errors        5.723820209503174
-energy_std          5.534993648529053
-speaking_time_ratio 5.401168346405029
-type_token_ratio    5.36381196975708
-max_tree_depth      5.303519248962402
-flesch_reading_ease 5.302517890930176
-pause_frequency     5.261669158935547
-long_pause_count    5.208794116973877
-avg_pause_duration  5.125491619110107
-word_count          5.092123508453369
-==================================================
+---
 
+### Evaluation Metrics
+| Metric | Value |
+|--------|-------|
+| RMSE | 0.7379 |
+| MAE | 0.4814 |
+| Accuracy (±0.5) | **64.63%** |
+| Pearson Correlation | 0.5032 |
 
-==================================================
-EVALUATION METRICS
-==================================================
-RMSE:                    0.7379
-MAE:                     0.4814
-Accuracy (±0.5):         64.63%
-Correlation:             0.5032
-==================================================
 
 
 ## USAGE 
